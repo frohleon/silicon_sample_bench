@@ -12,66 +12,66 @@ sections (B) once per model. See the call's *Disclosure policy* for escrow rules
 ---
 
 ## 0 · Approach identity and output
-- **0.1 Team ★** — name, the one or two members (teams are at most two, unless a larger team was approved on request), affiliations, corresponding contact:
-- **0.2 Plain-language summary ★** — one paragraph, what the approach does (not how):
-- **0.3 Submission tier & approach family ★** — tier (1/2/3); family (e.g. per-respondent simulation / agent / direct forecast; single model / ensemble / multi-agent; zero-shot / literature-conditioned):
-- **0.4 Pipeline diagram** — ordered steps from raw inputs to submitted file:
-- **0.5 Coverage ★** — number of respondents/cells/estimates; mapping to conditions. Full coverage is required: every submission predicts **all 16 interventions and all 13 outcomes** (partial coverage is not accepted). Confirm here:
+- **0.1 Team ★** — GESISCSS; Leon Fröhling and Claudia Wagner, both GESIS CSS. Corresponding contact: leon.froehling@gesis.org
+- **0.2 Plain-language summary ★** — We use survey data (WVS US) to construct persona descriptions for a sample of the US population. We expose these personas to the conditions as well as to the survey questions in the context of zero-shot prompts, prompting an LLM to generate survey responses from the perspectives of these personas.
+- **0.3 Submission tier & approach family ★** — tier (1); per-respondent simulation; single model; zero-shot
+- **0.4 Pipeline diagram** — 1. identification of relevant US general population survey; 2. selection of relevant survey variables to use for persona constructions via LLM-based approach; 3. creation of persona descriptions; 4. preparation of prompts for zero-shot persona-prompting setup (using shared materials, i.e., condition texts, survey questions, etc.); 5. generation of survey responses (1 prompt := 1 survey response); 6. processing of generated survey responses to match required formats
+- **0.5 Coverage ★** — **all 16 interventions and all 13 outcomes** - we have full coverage, with 500 participants per condition and 1,500 for control; each participant-row features all 13 outcomes
 
 ## A · Scope of LLM use
-- **A.1 Purpose** — every workflow stage where LLMs are used:
-- **A.2 Degree of automation ★** — confirm fully automated, no human in the loop at prediction time; note any exception:
+- **A.1 Purpose** — 1. we used an LLM (Qwen3-32B-AWQ 4bit) for the selection of relevant persona attributes from the set of all variables available in our base survey (WVS US 2017 wave) and 2. we used an LLM (Gemma3-12B-it) for the zero-shot persona-prompting setup used for response generation
+- **A.2 Degree of automation ★** — The LLM used for response generation was given a prompt featuring the condition, the description of the participant, the survey question text, the available response options / outcome range, and some instructions on how to reply to the prompt. Each prompt thus led to the simulation of an individual participant's response to a single survey question for a specific condition as featured in the survey materials. 
 
 ## B · Model / system details (once per model)
-- **B.1 Model name(s)** — exact identifiers incl. provider, size, version/timestamp, source link:
-- **B.2 Access & context mode** — API/web/local; API name + version; chat vs stateless; exact call dates:
-- **B.3 Configuration** — temperature, top-p/top-k, max tokens, penalties, stop sequences, seeds, reasoning effort, completions per item:
-- **B.4 Customization** — fine-tuning, RAG, prompt optimization, tool use, web search, agentic scaffolds (cross-ref H):
-- **B.5 Persistent memory** — across interactions? what persisted:
-- **B.6 Inference stack** — for local models: serving framework + version, quantization, hardware:
-- **B.7 Ensembles** — members + exact aggregation rule:
+- **B.1 Model name(s)** — https://huggingface.co/google/gemma-3-12b-it (Google, 12B, instruction-tuned)
+- **B.2 Access & context mode** — local
+- **B.3 Configuration** — model's default parameters; explicitly set were temperature=1, max_tokens=16, n=1, seed=42; no reasoning
+- **B.4 Customization** — None
+- **B.5 Persistent memory** — None
+- **B.6 Inference stack** — vLLM; no quantization; single 40GB partition of NVIDIA A100 80GB GPU
+- **B.7 Ensembles** — None
 
 ## C · Prompts
-- **C.1 Exact prompts** — verbatim text or link to deposited file; were they iteratively refined? pre-specified vs in response to outputs:
-- **C.2 System-wide instructions**:
-- **C.3 Prompt-design rationale** — brief rationale for the prompt design: why prompts were structured as they were, and the reasoning behind major design choices (recommended, not required):
+- **C.1 Exact prompts** — pre-specified; prompts were generated using a simple template featuring placeholders for the condition-texts, the persona description, the survey question, as well as the available response options / the response range; prompt template for outcomes: 
+- **C.2 System-wide instructions**: — None
+- **C.3 Prompt-design rationale** — None
 
 ## D · Persona / profile construction (Tiers 1–2)
-- **D.1 Profile source** — source of demographic profiles you constructed: a public survey (e.g. GSS / ANES / Census), other survey, fully synthetic, or none. The benchmark ships no participant pool; report how you built yours, incl. condition assignments:
-- **D.2 Profile verbalization** — which variables, rendered how (template vs generated narrative; if generated: model + prompt):
-- **D.3 Assignment & weighting** — number of personas, assignment to conditions (your responsibility, all 17 conditions), reuse, weighting/matching:
+- **D.1 Profile source** — WVS US Wave 7; random sample of 500 survey respondents; relevant attributes for persona construction identified via LLM-based approach, selecting the 10 most frequently selected attributes across 1,000 independent model runs
+- **D.2 Profile verbalization** — simple key-value format for persona descriptions, with (paraphrases of) survey questions as keys and (self-contained) survey responses as values; selected attributes (WVS US Wave 7 Question IDs: ['Q275', 'Q261', 'Q240', 'Q288', 'Q290', 'Q199', 'Q75', 'Q158', 'Q164', 'Q266'] / Paraphrases: [What is the highest level of education you have completed?; In what year were you born?; Where do you place your political views on a left–right scale from left (1) to right (10)?; On a 1–10 income scale for your country, where 1 is the lowest and 10 the highest income group, which step best represents your household’s total income?; Do you belong to any racial or ethnic group, and if so, which one?; How interested are you in politics?; How much confidence do you have in universities: a great deal, quite a lot, not very much, or none at all?; To what extent do you agree or disagree that science and technology are making our lives healthier, easier, and more comfortable?; How important is God in your life?; In which country were you born?])
+- **D.3 Assignment & weighting** — 500 personas; reused across all conditions (each response generated completely independently of all other responses)
 
 ## E · Stimulus and survey administration
-- **E.1 Stimulus presentation** — verbatim vs paraphrase; how state-contingent content is handled:
-- **E.2 Survey walk-through** — one item/call vs blocks vs whole survey; context carry-over; item/option ordering & randomization; scale display; attention/comprehension handling:
-- **E.3 Response elicitation** — free text / constrained choice / structured output / token log-probabilities (if logprobs: normalization & mapping):
+- **E.1 Stimulus presentation** — Single zero-shot prompt per survey question, featuring the relevant context (instructions, persona, condition, question, response options) 
+- **E.2 Survey walk-through** — Not applicable; each response generated independently
+- **E.3 Response elicitation** — Free text; relying on instruct-model's ability to select from presented response options / range of valid responses 
 
 ## F · Stochasticity and aggregation
-- **F.1 Runs & seeds** — runs per respondent/item/estimate; seeds; reproducibility under identical settings:
-- **F.2 Aggregation rule** — how multiple generations become submitted values (mean/median/mode/first/sampled/…):
+- **F.1 Runs & seeds** — single run per respondent; seed and prompts stored 
+- **F.2 Aggregation rule** — Not applicable
 
 ## G · Validation & post-processing
-- **G.1 Human validation** — any human review of outputs (often N/A):
-- **G.2 Post-processing** — parsing rules; handling of refusals/malformed/missing/out-of-range; exclusions; for approaches that generate individual responses, the resulting effective N per condition (descriptive disclosure, not a scoring input):
-- **G.3 Calibration corrections** — any post-hoc scaling/shifting/debiasing and exactly what data it was fit on (cross-ref H/I):
+- **G.1 Human validation** — Not applicable
+- **G.2 Post-processing** — Check if generated responses complied with available response options; in very few cases the response option value would be generated in place of the requested key, in which case the expected response could be retrieved via the available mapping between keys and values; valid n=500 due to strong adherence of LLM to required response format
+- **G.3 Calibration corrections** — Not applicable
 
 ## H · Learning and conditioning components
-- **H.1 Fine-tuning data** — exact corpus (hashes/DOIs), hyperparameters, checkpoints:
-- **H.2 Context & retrieval corpora** — exact document set in context / indexed, archived in the deposit:
+- **H.1 Fine-tuning data** — Not applicable
+- **H.2 Context & retrieval corpora** — Not applicable
 
 ## I · Data inputs, blinding, and competing interests
-- **I.1 Competing interests ★** — funding, in-kind compute/model access, relationships with LLM-interested entities:
-- **I.2 External human data †** — all external human datasets that informed the approach anywhere (training/fine-tuning/retrieval/ICL/calibration):
-- **I.3 Blinding attestation ★** — **mandatory.** Signed attestation that no team member accessed, solicited, or was shown any human outcome data from this study, including pilots, before the prediction lock:
-- **I.4 Contamination note †** — training cutoff of every model vs public release dates of this project's materials; note any known exposure:
+- **I.1 Competing interests ★** — None
+- **I.2 External human data †** — WVS Wave 7 - USA 2017 (https://www.worldvaluessurvey.org/WVSDocumentationWV7.jsp) used for persona construction
+- **I.3 Blinding attestation ★** — **mandatory.** No team member accessed, solicited, or was shown any human outcome data from this study, including pilots, before the prediction lock.
+- **I.4 Contamination note †** — Google Gemma 3 family released 2025/03, thus training cutoff likely months before that date
 
 ## J · Internal selection procedure
-- **J.1 Design-space search †** — how the final pipeline was chosen: how many configurations tried, internal validation criterion, what data it ran against:
+- **J.1 Design-space search †** — Not applicable; no optimization across alternative approaches or parameter constellations due to time and resource constraints
 
 ## K · Reproducibility & frozen artifacts
-- **K.1 Code & materials** — link/DOI, secrets removed, determinism/seeds documented (also record the link in `metadata.json` → `code_repository` / `code_doi`):
-- **K.2 Raw output logs †** — complete unprocessed model responses archived, hashed, time-stamped (required for Tiers 1–2, public or escrowed; Tier 3 where intermediate generations exist; oversized logs may be a separate linked Zenodo upload):
-- **K.3 Computational resources** — API-call counts, total tokens, cost, compute time:
+- **K.1 Code & materials** — https://github.com/frohleon/silicon_sample_bench; full code repository and documentation still to be done after initial submission of results
+- **K.2 Raw output logs †** — to be done
+- **K.3 Computational resources** — to be done
 
 ## L · Disclosure class
 Each item above is deposited as **public**, **escrowed** (sealed from the public but available to the
