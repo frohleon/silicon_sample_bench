@@ -20,9 +20,9 @@
   "entry": "primary",
   "approach_family": "per-respondent simulation, single model",
   "models": [
-    "gpt-4o-mini-2024-07-18"
+    "google/gemma-3-12b-it"
   ],
-  "code_repository": "https://github.com/your-team/your-repo",
+  "code_repository": "https://github.com/frohleon/silicon_sample_bench",
   "code_doi": null,
   "disclosure_class": "A",
   "escrow_doi": null,
