@@ -1,13 +1,18 @@
 {
-  "team_id": "example",
-  "team_name": "Example Team (replace me)",
-  "contact": "name@institution.edu",
+  "team_id": "team_4",
+  "team_name": "GESISCSS",
+  "contact": "leon.froehling@gesis.org",
   "creators": [
     {
-      "name": "Lastname, Firstname",
-      "affiliation": "Your institution",
+      "name": "Fröhling, Leon",
+      "affiliation": "GESIS",
       "orcid": ""
-    }
+    },
+    {
+      "name": "Wagner, Claudia",
+      "affiliation": "GESIS",
+      "orcid": ""
+    },
   ],
   "abstract": "",
   "license": "CC-BY-4.0",
