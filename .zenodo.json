@@ -1,0 +1,52 @@
+{
+  "upload_type": "software",
+  "title": "Silicon Sample Benchmark — Tier 1 (individual simulation) submission (team team_4)",
+  "version": "1.0-t1",
+  "language": "eng",
+  "access_right": "open",
+  "license": "CC-BY-4.0",
+  "creators": [
+    {
+      "name": "Fröhling, Leon",
+      "affiliation": "GESIS",
+      "orcid": "0000-0002-5339-7019"
+    },
+    {
+      "name": "Wagner, Claudia",
+      "affiliation": "GESIS",
+      "orcid": "0000-0002-0640-8221"
+    }
+  ],
+  "description": "<p>Tier&nbsp;1 (individual simulation) submission to the <a href=\"https://janpfander.github.io/llm_predictions_megastudy/\">Silicon Sample Benchmark</a> (team <code>team_4</code>).</p><p>Approach family: per-respondent simulation, single model. Model(s): google/gemma-3-12b-it. Coverage: 16 interventions &times; 13 preregistered outcomes.</p><p>This record archives the prediction file(s), generation code, and method registration form.</p>",
+  "keywords": [
+    "Silicon Sample Benchmark",
+    "silicon sampling",
+    "large language models",
+    "computational social science",
+    "survey methodology",
+    "public opinion",
+    "climate communication",
+    "treatment effect prediction"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://janpfander.github.io/llm_predictions_megastudy/",
+      "relation": "isPartOf",
+      "scheme": "url",
+      "resource_type": "publication-other"
+    },
+    {
+      "identifier": "https://janpfander.github.io/llm_predictions_megastudy/amendment_preregistration.html",
+      "relation": "references",
+      "scheme": "url",
+      "resource_type": "publication-preprint"
+    },
+    {
+      "identifier": "https://github.com/frohleon/silicon_sample_bench",
+      "relation": "isCompiledBy",
+      "scheme": "url",
+      "resource_type": "software"
+    }
+  ],
+  "notes": "Team team_4. Disclosure class A."
+}
