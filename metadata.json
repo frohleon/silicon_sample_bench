@@ -29,8 +29,8 @@
   "zenodo_doi": null,
   "prediction_files": [
     {
-      "file": "predictions/example_T1_primary_v1.csv",
-      "sha256": "0f24e117fcf6803743a12ab43f42bf8b0a7893fb9a706e5303cae3eadb79cc59"
+      "file": "predictions/team_4_T1_primary_v1.csv",
+      "sha256": "B5377DC0931EEAD0CCF6E11C04C09B4F433C331C5679E80848C1919847F8D8AD"
     }
   ],
   "coverage": {
