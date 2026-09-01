@@ -69,7 +69,7 @@ sections (B) once per model. See the call's *Disclosure policy* for escrow rules
 - **J.1 Design-space search †** — Not applicable; no optimization across alternative approaches or parameter constellations due to time and resource constraints
 
 ## K · Reproducibility & frozen artifacts
-- **K.1 Code & materials** — https://github.com/frohleon/silicon_sample_bench; full code repository and documentation still to be done after initial submission of results
+- **K.1 Code & materials** — https://github.com/frohleon/silicon_sample_bench; documentation of unprocessed model responses and code for preparation of predictions-file available in raw_data_deposit
 - **K.2 Raw output logs †** — complete unprocessed model responses - as they have been produced and stored during response generation - are provided in raw_data_deposit, together with all code and materials necessary to generate our predictions (predictions/team_4_T1_primary_v1.csv) from them
 - **K.3 Computational resources** — 57,000 prompts (19 conditions, 500 personas, 6 variables) with on average 573 tokens for generation of demographics/control variables and 418,000 prompts (19 conditions, 500 personas, 44 variables) with on average 1,150 tokens for generation of outcome responses, totalling approx. 57,000 * 573 + 418,000 * 1,150 = 32,661,000 + 480,700,000 = 513,361,000 tokens (>>99% input tokens); approximately 5 minutes compute time per condition for demographics/control variables and approximately 30 minutes compute time per condition for outcome responses, totalling approx. 5 * 19 + 30 * 19 = 95 + 570 = 665 minutes compute time
 
