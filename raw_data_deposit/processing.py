@@ -90,7 +90,11 @@ for i, row in all_results.iterrows():
         dict_conditions[condition][persona] = {}
     dict_conditions[condition][row['persona']][row['outcome']] = row['response']
 
-conditions = [k for k in dict_conditions.keys()]
+# conditions = [k for k in dict_conditions.keys()]
+conditions = ['apple aardvark', 'crushing chicken; gross grasshopper; homely halibut', 'orchid orangutan; defiant dragonfly', 'complicated cockroach', 
+'jealous jaguar', 'control baseball', 'control neckties', 'worse wildfowl', 'phony parrotfish', 'periwinkle partridge', 'flimsy fish',
+'giant gibbon; brick bobcat', 'perfect prawn', 'limping llama; friendly frog', 'difficult dog', 'practical planarian', 'honored haddock',
+'heartfelt hummingbird', 'control dances']
 outcomes = [o for o in dict_conditions[conditions[0]]['p2571'].keys()]
 
 all_responses = []
