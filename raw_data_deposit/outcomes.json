@@ -1,0 +1,302 @@
+{
+    "gender": {
+        "id": "QID1721185783",
+        "question": "What is your gender?",
+        "choices": {"1": "Male", "2": "Female", "3": "Other"},
+	"type": "Control"
+    },
+    "year_birth": {
+        "id": "QID1721185784",
+        "question": "What is your year of birth?",
+        "range": [1920, 2008],
+	"type": "Age"
+    },
+    "race": {
+        "id": "QID1721185785",
+        "question": "Please select which race / ethnicity you most identify as.",
+        "choices": {"1": "White / Caucasian", "2": "Black / African-American", "3": "Latino / Hispanic", "4": "Asian / Asian-American", "5": "Other"},
+	"type": "Control"
+    },
+    "education": {
+        "id": "QID1721185786",
+        "question": "What is the highest level of school that you have completed?",
+        "choices": {"1": "Less than high school", "2": "High school diploma / GED", "3": "Some College", "4": "Bachelor's degree", "5": "Postgraduate (Master's degree, Ph.D., Professional Degree)", "6": "Ph.D."},
+	"type": "Control"
+    },
+    "income": {
+        "id": "QID1721185788",
+        "question": "What is your total yearly family/household income before taxes?",
+        "choices": {"1": "Less than $30,000", "2": "$30,000 to $55,999", "3": "$56,000 to $99,999", "4": "$100,000 to $167,999", "5": "$168,000 or more"},
+	"type": "Control"
+    },
+    "party": {
+        "id": "QID1721185795",
+        "question": "Generally speaking, do you usually think of yourself as a Republican, a Democrat, an Independent, or what?",
+        "choices": {"1": "Republican", "2": "Independent", "3": "Democrat", "4": "Other (please specify)"},
+	"type": "Control"
+    },
+    "trust_competent_1": {
+        "id": "QID1721185848",
+        "question": "Please answer the following question on how you perceive climate scientists. How much or how little attention do climate scientists pay to other people's views?",
+        "range": {"0": "Extremely incompetent", "100": "Very competent"},
+        "type": "Outcome" 
+    },
+    "trust_intelligent_1": {
+        "id": "QID1721185849",
+        "question": "Please answer the following question on how you perceive climate scientists. How unintelligent or intelligent are most climate scientists?",
+        "range": {"0": "Very unintelligent", "100": "Very intelligent"},
+        "type": "Outcome" 
+    },
+    "trust_qualified_1": {
+        "id": "QID1721185850",
+        "question": "Please answer the following question on how you perceive climate scientists. How unqualified or qualified are most climate scientists?",
+        "range": {"0": "Very unqualified", "100": "Very qualified"},
+        "type": "Outcome" 
+    },
+    "trust_honest_1": {
+        "id": "QID1721185851",
+        "question": "Please answer the following question on how you perceive climate scientists. How dishonest or honest are most climate scientists?",
+        "range": {"0": "Very dishonest", "100": "Very honest"},
+        "type": "Outcome"  
+    },
+    "trust_ethical_1": {
+        "id": "QID1721185852",
+        "question": "Please answer the following question on how you perceive climate scientists. How unethical or ethical are most climate scientists?",
+        "range": {"0": "Very unethical", "100": "Very ethical"},
+        "type": "Outcome" 
+    },
+    "trust_sincere_1": {
+        "id": "QID1721185853",
+        "question": "Please answer the following question on how you perceive climate scientists. How insincere or sincere are most climate scientists?",
+        "range": {"0": "Very insincere", "100": "Very sincere"},
+        "type": "Outcome"  
+    },
+    "trust_concerned_1": {
+        "id": "QID1721185854",
+        "question": "Please answer the following question on how you perceive climate scientists. How unconcerned or concerned are most climate scientists about people’s wellbeing?",
+        "range": {"0": "Very unconcerned", "100": "Very concerned"},
+        "type": "Outcome"  
+    },
+    "trust_improve_1": {
+        "id": "QID1721185855",
+        "question": "Please answer the following question on how you perceive climate scientists. How uneager or eager are most climate scientists to improve others’ lives?",
+        "range": {"0": "Very uneager", "100": "Very eager"},
+        "type": "Outcome" 
+    },
+    "trust_considerate_1": {
+        "id": "QID1721185856",
+        "question": "Please answer the following question on how you perceive climate scientists. How inconsiderate or considerate are most climate scientists of others’ interests?",
+        "range": {"0": "Very inconsiderate", "100": "Very considerate"},
+        "type": "Outcome"  
+    },
+    "trust_feedback_1": {
+        "id": "QID1721185857",
+        "question": "Please answer the following question on how you perceive climate scientists. How open, if at all, are most climate scientists to feedback?",
+        "range": {"0": "Not open at all", "100": "Very open"},
+        "type": "Outcome" 
+    },
+    "trust_transparent_1": {
+        "id": "QID1721185858",
+        "question": "Please answer the following question on how you perceive climate scientists. How unwilling or willing are most climate scientists to be transparent?",
+        "range": {"0": "Very unwilling", "100": "Very willing"},
+        "type": "Outcome"  
+    },
+    "trust_attention_1": {
+        "id": "QID1721185859",
+        "question": "Please answer the following question on how you perceive climate scientists. How much or how little attention do climate scientists pay to other people's views?",
+        "range": {"0": "Very little attention", "100": "A great deal of attention"},
+        "type": "Outcome"   
+    },
+    "trust_post_1": {
+        "id": "QID1721185863",
+        "question": "How much do you trust climate scientists?",
+        "range": {"0": "Not at all", "100": "Very strongly"},
+        "type": "Outcome" 
+    },
+    "distrust_1": {
+        "id": "QID1721185868",
+        "question": "How much do you distrust climate scientists?",
+        "range": {"0": "Not at all", "100": "Very strongly"},
+        "type": "Outcome" 
+    },
+    "funding_5": {
+        "id": "QID1721185878",
+        "question": "Do you think the federal government is spending too much, too little or about the right amount of money on climate change research?",
+        "range": {"0": "Far too little", "50": "About the right amount", "100": "Far too much"},
+        "type": "Outcome"
+    },
+    "belief_post_1": {
+        "id": "QID1721185861",
+        "question": "How accurate do you think this statement is? Human activities are causing climate change.",
+        "range": {"0": "Not at all accurate", "100": "Extremely accurate"},
+        "type": "Outcome" 
+    },
+    "policy_general_1": {
+        "id": "QID1721185876",
+        "question": "How much do you oppose or support the following statement? The U.S. government should do more to reduce global warming.",
+        "range": {"0": "Strongly oppose", "100": "Strongly support"},
+        "type": "Outcome"
+    },
+    "donation": {
+        "id": "QID1721185866",
+        "question": "You have the opportunity to allocate real money between yourself and a non-profit organization. After data collection is complete, we will randomly select 100 participants from this study to receive a $10 bonus payment. If you are selected, the amount you allocate to yourself will be paid to you as a bonus, and the amount you allocate to the organization will be donated on your behalf. The organization you can choose to allocate real money to is the American Meteorological Society (AMS), a non-profit, non-partisan society of 12,000 scientists and other professionals that supports climate change research. With your donation, you help AMS to advance science for the benefit of society. You may allocate the $10 in any way you like: keep all $10 for yourself - donate all $10 to AMS - or choose any split in between. Of the $10, how much would you like to donate to the AMS?",
+        "choices": {"1": "0$", "16": "1$", "17": "2$", "18": "3$", "19": "4$", "20": "5$", "21": "6$", "22": "7$", "23": "8$", "24": "9$", "25": "10$"},
+        "type": "Outcome_Category"
+    },
+    "newsletter": {
+        "id": "QID1721186006",
+        "question": "Learn more about climate science \nIf you'd like to learn more about climate science and solutions, you can subscribe to the newsletter by climate scientist Katharine Hayhoe. \nHer newsletter 'Talking Climate' provides short, accessible updates on climate science and climate solutions for a general audience. \nSigning up takes less than a minute. Please select the free subscription option - there is no need to choose a paid version. \nThe link below will open the newsletter in a new tab. You can switch back to the current tab and continue the survey right away. \nDid you subscribe to the 'Talking Climate' newsletter on the previous page?",
+        "choices": {"1": "Yes", "2": "No"},
+	"type": "Outcome_Category"
+    },
+    "inst_trust_epa_1": {
+        "id": "QID1721185829",
+        "question": "How much do you trust the following institutions? Environmental Protection Agency (EPA)",
+        "range": {"0": "Not at all", "100": "Very strongly"},
+        "type": "Outcome"
+    },
+    "inst_trust_nasa_1": {
+        "id": "QID1721185830",
+        "question": "How much do you trust the following institutions? National Aeronautics and Space Administration (NASA)",
+        "range": {"0": "Not at all", "100": "Very strongly"},
+        "type": "Outcome"
+    },
+    "inst_trust_noaa_1": {
+        "id": "QID1721185831",
+        "question": "How much do you trust the following institutions? National Oceanic and Atmospheric Administration (NOAA)",
+        "range": {"0": "Not at all", "100": "Very strongly"},
+        "type": "Outcome"
+    },
+    "inst_trust_uni_1": {
+        "id": "QID1721185832",
+        "question": "How much do you trust the following institutions? Universities and colleges",
+        "range": {"0": "Not at all", "100": "Very strongly"},
+        "type": "Outcome"
+    },
+    "inst_trust_gov_1": {
+        "id": "QID1721185833",
+        "question": "How much do you trust the following institutions? Federal government",
+        "range": {"0": "Not at all", "100": "Very strongly"},
+        "type": "Outcome"
+    },
+    "policy_1_1": {
+        "id": "QID1721185871",
+        "question": "To what extent do you agree or disagree with the following statements? Climate scientists should work closely with policy makers to integrate scientific results into policy-making.",
+        "range": {"0": "Strongly disagree", "100": "Strongly agree"},
+        "type": "Outcome"
+    },
+    "policy_2_1": {
+        "id": "QID1721185872",
+        "question": "To what extent do you agree or disagree with the following statements? Climate scientists should actively advocate for specific policies.",
+        "range": {"0": "Strongly disagree", "100": "Strongly agree"},
+        "type": "Outcome"
+    },
+    "policy_3_1": {
+        "id": "QID1721185873",
+        "question": "To what extent do you agree or disagree with the following statements? Climate scientists should communicate their findings to policy makers.",
+        "range": {"0": "Strongly disagree", "100": "Strongly agree"},
+        "type": "Outcome" 
+    },
+    "policy_4_1": {
+        "id": "QID1721185874",
+        "question": "To what extent do you agree or disagree with the following statements? Climate scientists should be more involved in the policy-making process.",
+        "range": {"0": "Strongly disagree", "100": "Strongly agree"},
+        "type": "Outcome"
+    },
+    "concern_1_1": {
+        "id": "QID1721185811",
+        "question": "Please indicate your views on the following questions. How concerned are you about climate change?",
+        "range": {"0": "Not at all", "100": "Extremely"},
+        "type": "Outcome" 
+    },
+    "concern_2_1": {
+        "id": "QID1721185812",
+        "question": "Please indicate your views on the following questions. How serious a problem is climate change?",
+        "range": {"0": "Not at all", "100": "Extremely"},
+        "type": "Outcome" 
+    },
+    "concern_3_1": {
+        "id": "QID1721185813",
+        "question": "Please indicate your views on the following questions. Relative to other issues facing the US, how important is climate change?",
+        "range": {"0": "The least important issue", "100": "The most important issue"},
+        "type": "Outcome" 
+    },
+    "policy_specific_1_1": {
+        "id": "QID1721185816",
+        "question": "How much do you support or oppose the following policies? Raising taxes on fossil fuels (e.g., gas, oil, coal)",
+        "range": {"0": "Strongly oppose", "100": "Strongly support"},
+        "type": "Outcome"
+    },
+    "policy_specific_2_1": {
+        "id": "QID1721185817",
+        "question": "How much do you support or oppose the following policies? Expanding infrastructure for public transportation",
+        "range": {"0": "Strongly oppose", "100": "Strongly support"},
+        "type": "Outcome"
+    },
+    "policy_specific_3_1": {
+        "id": "QID1721185818",
+        "question": "How much do you support or oppose the following policies? Increasing the use of sustainable energy such as wind and solar energy",
+        "range": {"0": "Strongly oppose", "100": "Strongly support"},
+        "type": "Outcome"
+    },
+    "policy_specific_4_1": {
+        "id": "QID1721185819",
+        "question": "How much do you support or oppose the following policies? Protecting forested and land areas",
+        "range": {"0": "Strongly oppose", "100": "Strongly support"},
+        "type": "Outcome"
+    },
+    "policy_specific_5_1": {
+        "id": "QID1721185820",
+        "question": "How much do you support or oppose the following policies? Increasing taxes on carbon-intensive foods (e.g., beef and dairy products)",
+        "range": {"0": "Strongly oppose", "100": "Strongly support"},
+        "type": "Outcome" 
+    },
+    "policy_specific_6_1": {
+        "id": "QID1721185821",
+        "question": "How much do you support or oppose the following policies? Investing more in green jobs and businesses",
+        "range": {"0": "Strongly oppose", "100": "Strongly support"},
+        "type": "Outcome" 
+    },
+    "policy_specific_7_1": {
+        "id": "QID1721185822",
+        "question": "How much do you support or oppose the following policies? Introducing laws to keep waterways and oceans clean",
+        "range": {"0": "Strongly oppose", "100": "Strongly support"},
+        "type": "Outcome"
+    },
+    "individual_meat_1": {
+        "id": "",
+        "question": "How likely are you to engage in the following activities in the next twelve months? Eat less meat",
+        "range": {"0": "Not likely at all", "100": "Extremely likely"},
+        "type": "Outcome"
+    },
+    "individual_transport_1": {
+        "id": "",
+        "question": "How likely are you to engage in the following activities in the next twelve months? Walk, bicycle, carpool, or take public transportation more often instead of driving a vehicle by yourself",
+        "range": {"0": "Not likely at all", "100": "Extremely likely"},
+        "type": "Outcome" 
+    },
+    "individual_solar_1": {
+        "id": "",
+        "question": "How likely are you to engage in the following activities in the next twelve months? Install a solar panel",
+        "range": {"0": "Not likely at all", "100": "Extremely likely"},
+        "type": "Outcome"
+    },
+    "individual_fly_1": {
+        "id": "",
+        "question": "How likely are you to engage in the following activities in the next twelve months? Go on less personal (non-business) air travel",
+        "range": {"0": "Not likely at all", "100": "Extremely likely"},
+        "type": "Outcome"
+    },
+    "individual_talk_1": {
+        "id": "",
+        "question": "How likely are you to engage in the following activities in the next twelve months? Talk to friends and family about the importance of climate change",
+        "range": {"0": "Not likely at all", "100": "Extremely likely"},
+        "type": "Outcome"
+    },
+    "individual_donate_1": {
+        "id": "",
+        "question": "How likely are you to engage in the following activities in the next twelve months? Donate to an environmental NGO",
+        "range": {"0": "Not likely at all", "100": "Extremely likely"},
+        "type": "Outcome"
+    }
+}

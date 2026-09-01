@@ -1,0 +1,31 @@
+{
+    "map_gender": {"1": "Male", "2": "Female", "3": "Other"},
+    "map_race": {
+        "1": "White / Caucasian",
+        "2": "Black / African American",
+        "3": "Hispanic / Latino",
+        "4": "Asian / Asian American",
+        "5": "Other"
+    },
+    "map_education": {
+        "1": "Less than high school",
+        "2": "High school diploma / GED",
+        "3": "Some college or Associate's degree",
+        "4": "Bachelor's degree",
+        "5": "Master's degree / Professional degree",
+        "6": "Doctorate degree / Ph.D."
+    },
+    "map_income": {
+        "1": "Less than $30,000",
+        "2": "$30,000 to $55,999",
+        "3": "$56,000 to $99,999",
+        "4": "$100,000 to $167,999",
+        "5": "$168,000 or more"
+    },
+    "map_party": {
+        "1": "Republican",
+        "2": "Independent",
+        "3": "Democrat",
+        "4": "Other"
+    }
+}
