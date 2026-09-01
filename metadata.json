@@ -30,7 +30,7 @@
   "prediction_files": [
     {
       "file": "predictions/team_4_T1_primary_v1.csv",
-      "sha256": "39BAEBFDC6298D808347CFA2CF97745D78615C4472DF60A8466FEC682D42C5AA"
+      "sha256": "D8B2954BEFFFB5470FE2D4F13061CD83B8D2F84DC14F3FC25AD176DF6A3D67A2"
     }
   ],
   "coverage": {
